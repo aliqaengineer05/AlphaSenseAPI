@@ -1,0 +1,28 @@
+image: kashifali98229/test_automation_images:latest
+
+build:
+  stage: build
+  script:
+    - mvn clean
+test:
+  stage: test
+  script:
+    - mvn verify
+  artifacts:
+    when: always
+    paths:
+      - target/site/serenity/index.html
+    expire_in: 1 week
+
+deploy:
+  stage: deploy
+  script:
+    - mkdir report
+    - mv target/site/serenity/index.html report
+  artifacts:
+    when: always
+    paths:
+      - report
+    expire_in: 1 week
+    
+    
