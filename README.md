@@ -79,7 +79,7 @@ AlphaSense Document Viewer automated using Serenity Rest BBD & Maven
         </dependency>
 ```
 ## How to add new test cases?
-- Creat a feature file under `src/test/resources/features/search/apple.feature`
+- Creat a feature file under `src/test/resources/features/search/AlphaSense.feature`
 - Create a stepdefinition class under `src/test/java/starter/stepdefinitions` and implements steps `Given` `When` `Then`
 - Create a step class which implements steps for definition class under `src/test/java/starter/stepdefinitions` 
 
@@ -163,7 +163,8 @@ deploy:
 
 ## API Reference
 
-#### Get all apple
+#### Get Keyword 
+
 
 Please Take a fresh API link along with fresh Parameters and you can access this API 
 1.Go to Network tab
